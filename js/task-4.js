@@ -6,10 +6,10 @@ form.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
   const elements = event.target.elements;
-  if (elements.email.value === '') {
+  if (elements.email.value.trim() === '') {
     return alert('All form fields must be filled in');
   }
-  if (elements.password.value === '') {
+  if (elements.password.value.trim() === '') {
     return alert('All form fields must be filled in');
   }
   const info = {
